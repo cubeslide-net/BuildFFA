@@ -42,7 +42,7 @@ public class ItemManager {
 		ItemStack black = new ItemBuilder(Material.BLACK_STAINED_GLASS_PANE, 1, 15).name("§e").build();
 		ItemStack yellow = new ItemBuilder(Material.BLACK_STAINED_GLASS_PANE, 1, 4).name("§e").build();
 		
-		this.changeInventory = Bukkit.createInventory(null, 6*9, "§eInventar sorting");
+		this.changeInventory = Bukkit.createInventory(null, 6*9, "§eInv-sorting");
 		for(int i = 0; i < this.changeInventory.getSize(); i++) {
 			this.changeInventory.setItem(i, black);
 		}
