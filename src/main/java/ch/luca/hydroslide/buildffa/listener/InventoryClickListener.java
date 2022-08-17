@@ -15,7 +15,7 @@ public class InventoryClickListener implements Listener {
 		if(e.getClickedInventory() == null) return;
 		if(e.getCurrentItem() == null) return;
 		
-		if(e.getView().getTitle().equals("§eInventar Sortierung")) {
+		if(e.getView().getTitle().equals("§eInv-sorting")) {
 			if(!e.getClickedInventory().equals(p.getInventory())) {
 				e.setCancelled(true);
 				return;

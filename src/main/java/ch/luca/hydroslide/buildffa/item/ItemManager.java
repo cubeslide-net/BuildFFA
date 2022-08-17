@@ -39,8 +39,8 @@ public class ItemManager {
 		this.defaultItems[7] = this.sandstone;
 		this.defaultItems[8] = this.sandstone;
 		
-		ItemStack black = new ItemBuilder(Material.BLACK_STAINED_GLASS_PANE, 1, 15).name("§e").build();
-		ItemStack yellow = new ItemBuilder(Material.BLACK_STAINED_GLASS_PANE, 1, 4).name("§e").build();
+		ItemStack black = new ItemBuilder(Material.BLACK_STAINED_GLASS_PANE).name("§e").build();
+		ItemStack yellow = new ItemBuilder(Material.YELLOW_STAINED_GLASS_PANE).name("§e").build();
 		
 		this.changeInventory = Bukkit.createInventory(null, 6*9, "§eInv-sorting");
 		for(int i = 0; i < this.changeInventory.getSize(); i++) {
