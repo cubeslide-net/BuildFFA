@@ -38,9 +38,9 @@ public class Stats implements CommandExecutor {
 							int rank = BuildFFA.getInstance().getBuildFFADatabase().getRank(rs.getString("UUID"));
 							p.sendMessage(buildFFA.getPrefix() + "Name §b➼ §e" + rs.getString("name"));
 							p.sendMessage(buildFFA.getPrefix() + "Kills §b➼ §a" + rs.getInt("kills"));
-							p.sendMessage(buildFFA.getPrefix() + "Tode §b➼ §c" + rs.getInt("deaths"));
+							p.sendMessage(buildFFA.getPrefix() + "Deaths §b➼ §c" + rs.getInt("deaths"));
 							p.sendMessage(buildFFA.getPrefix() + "K/D §b➼ §a" + getKd(rs.getInt("kills"), rs.getInt("deaths")));
-							p.sendMessage(buildFFA.getPrefix() + "Rang im Ranking §b➼ §a" + rank);
+							p.sendMessage(buildFFA.getPrefix() + "Rank §b➼ §a" + rank);
 							return;
 						}
 					} catch (SQLException e) {
@@ -56,9 +56,9 @@ public class Stats implements CommandExecutor {
 				int rank = BuildFFA.getInstance().getBuildFFADatabase().getRank(p2.getUniqueId().toString());
 				p.sendMessage(buildFFA.getPrefix() + "Name §b➼ §e" + p2.getName());
 				p.sendMessage(buildFFA.getPrefix() + "Kills §b➼ §a" + user.getKills());
-				p.sendMessage(buildFFA.getPrefix() + "Tode §b➼ §c" + user.getDeaths());
+				p.sendMessage(buildFFA.getPrefix() + "Deaths §b➼ §c" + user.getDeaths());
 				p.sendMessage(buildFFA.getPrefix() + "K/D §b➼ §a" + getKd(user.getKills(), user.getDeaths()));
-				p.sendMessage(buildFFA.getPrefix() + "Rang im Ranking §b➼ §a" + rank);
+				p.sendMessage(buildFFA.getPrefix() + "Rank §b➼ §a" + rank);
 			});
 			return true;
 		} 
@@ -67,9 +67,9 @@ public class Stats implements CommandExecutor {
 			int rank = BuildFFA.getInstance().getBuildFFADatabase().getRank(p.getUniqueId().toString());
 			p.sendMessage(buildFFA.getPrefix() + "Name §b➼ §e" + p.getName());
 			p.sendMessage(buildFFA.getPrefix() + "Kills §b➼ §a" + user.getKills());
-			p.sendMessage(buildFFA.getPrefix() + "Tode §b➼ §c" + user.getDeaths());
+			p.sendMessage(buildFFA.getPrefix() + "Deaths §b➼ §c" + user.getDeaths());
 			p.sendMessage(buildFFA.getPrefix() + "K/D §b➼ §a" + getKd(user.getKills(), user.getDeaths()));
-			p.sendMessage(buildFFA.getPrefix() + "Rang im Ranking §b➼ §a" + rank);
+			p.sendMessage(buildFFA.getPrefix() + "Rank §b➼ §a" + rank);
 		});
 		return true;
 	}
