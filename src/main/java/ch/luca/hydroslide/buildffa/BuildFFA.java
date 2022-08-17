@@ -35,7 +35,6 @@ import com.google.common.reflect.ClassPath;
 import ch.luca.hydroslide.buildffa.commands.Build;
 import ch.luca.hydroslide.buildffa.commands.Setup;
 
-import ch.luca.hydroslide.buildffa.commands.Gamemode;
 import ch.luca.hydroslide.buildffa.commands.Inventory;
 import ch.luca.hydroslide.buildffa.commands.Ranking;
 import ch.luca.hydroslide.buildffa.commands.Stats;
@@ -151,7 +150,6 @@ public class BuildFFA extends JavaPlugin {
         getCommand("stats").setExecutor(new Stats(this));
         getCommand("vanish").setExecutor(new Vanish(this));
         getCommand("teleport").setExecutor(new Teleport(this));
-        getCommand("gamemode").setExecutor(new Gamemode(this));
         pluginManager.registerEvents(new Vanish(this), this);
 
         this.scoreboard = Bukkit.getScoreboardManager().getNewScoreboard();
