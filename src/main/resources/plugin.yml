@@ -1,11 +1,8 @@
 name: BuildFFA
-authors: [Thorsten, Luca]
+authors: [Thorsten, Luca, Lara]
 version: 1.0.0
 main: ch.luca.hydroslide.buildffa.BuildFFA
 depend:
-  - CoinsAPI
-  - CubePerms
-  - CubeNick
   - ProtocolLib
 commands:
   build:
