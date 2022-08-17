@@ -2,6 +2,7 @@ name: BuildFFA
 authors: [Thorsten, Luca, Lara]
 version: 1.0.0
 main: ch.luca.hydroslide.buildffa.BuildFFA
+api-version: 1.19
 depend:
   - ProtocolLib
 commands:

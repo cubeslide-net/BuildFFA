@@ -182,15 +182,6 @@ public class BuildFFA extends JavaPlugin {
                 }
             }
         }, 1L, 1L);
-        //TODO: createScoreboard
-        Bukkit.getConsoleSender().sendMessage(this.getPrefix() + "§5BuildFFA §7wurde §aerfolgreich §7gestartet.");
-        Bukkit.getConsoleSender().sendMessage(this.getPrefix() + "Datenbanken sowie Configs wurde §aerfolgreich §7geladen.");
-        Bukkit.getConsoleSender().sendMessage(this.getPrefix() + "Minecraft-Version: §c1.8");
-        Bukkit.getConsoleSender().sendMessage(this.getPrefix() + "Plugin-Version: §c1.0.0");
-        Bukkit.getConsoleSender().sendMessage(this.getPrefix() + "Autoren: §eLuca & Thorsten");
-        Bukkit.getConsoleSender().sendMessage(this.getPrefix() + "Project is pushed on Github");
-        Bukkit.getConsoleSender().sendMessage(this.getPrefix() + "§eDeveloped for §b§lHydroSlide.eu");
-        Bukkit.getConsoleSender().sendMessage(this.getPrefix() + "§4§lSourcecode is copyright protected!");
     }
 
     @Override
