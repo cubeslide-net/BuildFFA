@@ -81,16 +81,13 @@ public class User {
 				Player d = this.damage;
 				this.damage = null;
 				if(d != null) {
-					this.player.sendMessage(BuildFFA.getInstance().getPrefix() + "Du wurdest von §c" + d.getName() + " §7getötet!");
-					this.player.sendMessage(BuildFFA.getInstance().getPrefix() + "§c- §62 Coins");
+					this.player.sendMessage(BuildFFA.getInstance().getPrefix() + "You got killed by §c" + d.getName() + " §7!");
 					BuildFFA.getInstance().getUserManager().getUser(d).kill(this.player);
 				} else {
-					this.player.sendMessage(BuildFFA.getInstance().getPrefix() + "§cDu bist gestorben.");
-					this.player.sendMessage(BuildFFA.getInstance().getPrefix() + "§c- §62 Coins");
+					this.player.sendMessage(BuildFFA.getInstance().getPrefix() + "§cYou died");
 				}
 			} else {
-				this.player.sendMessage(BuildFFA.getInstance().getPrefix() + "§cDu bist gestorben.");
-				this.player.sendMessage(BuildFFA.getInstance().getPrefix() + "§c- §62 Coins");
+				this.player.sendMessage(BuildFFA.getInstance().getPrefix() + "§cYou died");
 			}
 			setInventory();
 			BuildFFA.getInstance().getBuildFFADatabase().update("UPDATE BuildFFA SET deaths=" + this.deaths + ", coins=" + this.coins + " WHERE uuid='" + this.player.getUniqueId().toString() + "'", true);
@@ -106,16 +103,13 @@ public class User {
 				Player d = this.damage;
 				this.damage = null;
 				if(d != null) {
-					this.player.sendMessage(BuildFFA.getInstance().getPrefix() + "Du wurdest von §c" + d.getDisplayName() + " §7getötet!");
-					this.player.sendMessage(BuildFFA.getInstance().getPrefix() + "§c- §62 Coins");
+					this.player.sendMessage(BuildFFA.getInstance().getPrefix() + "You got killed by §c" + d.getDisplayName() + " §7!");
 					BuildFFA.getInstance().getUserManager().getUser(d).kill(this.player);
 				} else {
-					this.player.sendMessage(BuildFFA.getInstance().getPrefix() + "§cDu bist gestorben.");
-					this.player.sendMessage(BuildFFA.getInstance().getPrefix() + "§c- §62 Coins");
+					this.player.sendMessage(BuildFFA.getInstance().getPrefix() + "§cYou died");
 				}
 			} else {
-				this.player.sendMessage(BuildFFA.getInstance().getPrefix() + "§cDu bist gestorben.");
-				this.player.sendMessage(BuildFFA.getInstance().getPrefix() + "§c- §62 Coins");
+				this.player.sendMessage(BuildFFA.getInstance().getPrefix() + "§cYou died");
 			}
 			setInventory();
 			BuildFFA.getInstance().getBuildFFADatabase().update("UPDATE BuildFFA SET deaths=" + this.deaths + ", coins=" + this.coins + " WHERE uuid='" + this.player.getUniqueId().toString() + "'", true);
@@ -124,13 +118,7 @@ public class User {
 	public void kill(Player p) {
 		this.player.setHealth(20.0D);
 		this.kills++;
-		if(player.hasPermission("buildffa.doublecoins")) {
-			this.player.sendMessage(BuildFFA.getInstance().getPrefix() + "Du hast §e" + p.getDisplayName() + " §7getötet.");
-			this.player.sendMessage(BuildFFA.getInstance().getPrefix() + "§a+ §65 Coins §8(§a+ §65 §7Coinbonus§8)");
-		} else {
-			this.player.sendMessage(BuildFFA.getInstance().getPrefix() + "Du hast §e" + p.getDisplayName() + " §7getötet.");
-			this.player.sendMessage(BuildFFA.getInstance().getPrefix() + "§a+ §65 Coins");
-		}
+		this.player.sendMessage(BuildFFA.getInstance().getPrefix() + "You killed §e" + p.getDisplayName() + " §7.");
 		//TODO: update kills line
 		BuildFFA.getInstance().getBuildFFADatabase().update("UPDATE BuildFFA SET kills=" + this.kills + ", coins=" + this.coins + " WHERE uuid='" + this.player.getUniqueId().toString() + "'", true);
 	}

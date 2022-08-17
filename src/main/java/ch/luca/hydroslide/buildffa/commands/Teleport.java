@@ -28,13 +28,13 @@ public class Teleport implements CommandExecutor {
 			return true;
 		}
 		if (args.length == 0) {
-			p.sendMessage(buildFFA.getPrefixUse() + "tp <Spieler> [Spieler]");
+			p.sendMessage(buildFFA.getPrefixUse() + "tp <player> [player]");
 		} else if (args.length == 1) {
 			Player target = Bukkit.getPlayer(args[0].toLowerCase());
 			if (target != null) {
 				Location targetLocation = target.getLocation();
 				p.teleport(targetLocation);
-				p.sendMessage(buildFFA.getPrefix() + "Du hast dich zu §e" + target.getName() + " §7teleportiert.");
+				p.sendMessage(buildFFA.getPrefix() + "You teleported to §e" + target.getName() + " §7.");
 			} else {
 				p.sendMessage(buildFFA.getPlayerNotOnline());
 			}
@@ -44,10 +44,10 @@ public class Teleport implements CommandExecutor {
 			if ((target_1 != null) && (target_2 != null)) {
 				Location tloc2 = target_2.getLocation();
 				target_1.teleport(tloc2);
-				target_1.sendMessage(buildFFA.getPrefix() + "Du wurdest zu §e" + target_2.getDisplayName() + " §7teleportiert.");
-				target_2.sendMessage(buildFFA.getPrefix() + "Der Spieler §e" + target_1.getDisplayName() + " §7wurde zu dir teleportiert.");
+				target_1.sendMessage(buildFFA.getPrefix() + "You teleported to §e" + target_2.getDisplayName() + " §7.");
+				target_2.sendMessage(buildFFA.getPrefix() + "The player §e" + target_1.getDisplayName() + " §7got teleported to you.");
 				if ((target_1 != p) || (target_2 != p)) {
-					p.sendMessage(buildFFA.getPrefix() + "Der Spieler §e" + target_1.getDisplayName() + " §7wurde zu §c" + target_2.getDisplayName() + " §7teleportiert.");
+					p.sendMessage(buildFFA.getPrefix() + "The player §e" + target_1.getDisplayName() + " §7got teleported to §c" + target_2.getDisplayName() + " §7.");
 					return true;
 				}
 			} else {
@@ -78,9 +78,9 @@ public class Teleport implements CommandExecutor {
 				loc.setY(y);
 				loc.setZ(z);
 				p.teleport(loc);
-				p.sendMessage(buildFFA.getPrefix() + "Du wurdest teleportiert.");
+				p.sendMessage(buildFFA.getPrefix() + "You got teleported.");
 			} catch (NumberFormatException error) {
-				p.sendMessage(buildFFA.getPrefix() + "§cGib eine Zahl an.");
+				p.sendMessage(buildFFA.getPrefix() + "§cPlease enter a number!");
 			}
 		}
 		return false;

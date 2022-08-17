@@ -24,7 +24,7 @@ public class Inventory implements CommandExecutor {
 		Player p = (Player) sender;
 
 		if(p.getLocation().getBlockY() < BuildFFA.getInstance().getFightHeight()) {
-			p.sendMessage(buildFFA.getPrefix() + "§cDu kannst dein Inventar nur am Spawn sortieren.");
+			p.sendMessage(buildFFA.getPrefix() + "§cThis command can only be used at the spawn!");
 			return true;
 		}
 		User user = buildFFA.getUserManager().getUser(p);

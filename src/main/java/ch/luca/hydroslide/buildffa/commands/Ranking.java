@@ -29,7 +29,7 @@ public class Ranking implements CommandExecutor {
 		Player p = (Player) sender;
 
 		if(!BuildFFA.getInstance().getUserManager().getUser(p).checkDelay()) {
-			p.sendMessage(buildFFA.getPrefix() + "§cBitte warte kurz...");
+			p.sendMessage(buildFFA.getPrefix() + "§cPlease wait a moment...");
 			return true;
 		}
 		Bukkit.getScheduler().runTaskAsynchronously(BuildFFA.getInstance(), () -> {
@@ -38,7 +38,7 @@ public class Ranking implements CommandExecutor {
 				connection = BuildFFA.getInstance().getSqlPool().getConnection();
 				PreparedStatement preparedStatement = connection.prepareStatement("SELECT * FROM BuildFFA ORDER BY kills DESC LIMIT 10");
 				ResultSet rs = preparedStatement.executeQuery();
-				p.sendMessage(buildFFA.getPrefix() + "§cRanking wird geladen...");
+				p.sendMessage(buildFFA.getPrefix() + "§cRanking is loading...");
 				while(rs.next()) {
 					p.sendMessage(buildFFA.getPrefix() + "Name §b➼ §e" + rs.getString("name") + " §8| §7Kills §b➼ §a" + rs.getInt("kills"));
 				}

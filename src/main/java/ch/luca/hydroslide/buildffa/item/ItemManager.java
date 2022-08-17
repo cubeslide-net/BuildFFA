@@ -21,15 +21,15 @@ public class ItemManager {
 	private Inventory changeInventory;
 
 	public ItemManager() {
-		this.sword = new ItemBuilder(Material.GOLDEN_SWORD).name("§4Schwert").enchantment(Enchantment.DAMAGE_ALL, 2).setUnbreakable(true).build();
-		this.angel = new ItemBuilder(Material.FISHING_ROD).name("§5Angel").setUnbreakable(true).build();
-		this.stick = new ItemBuilder(Material.STICK).name("§3Knock Stick").enchantment(Enchantment.KNOCKBACK, 2).setUnbreakable(true).build();
-		this.sandstone = new ItemBuilder(Material.SANDSTONE, 64, 0).name("§eBlöcke").build();
+		this.sword = new ItemBuilder(Material.GOLDEN_SWORD).name("§4Sword").enchantment(Enchantment.DAMAGE_ALL, 2).setUnbreakable(true).build();
+		this.angel = new ItemBuilder(Material.FISHING_ROD).name("§5Rod").setUnbreakable(true).build();
+		this.stick = new ItemBuilder(Material.STICK).name("§3Knockbackstick").enchantment(Enchantment.KNOCKBACK, 2).setUnbreakable(true).build();
+		this.sandstone = new ItemBuilder(Material.SANDSTONE, 64, 0).name("§3Blocks").build();
 		
-		this.helmet = new ItemBuilder(Material.LEATHER_HELMET).name("§cHelm").enchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 2).setUnbreakable(true).build();
-		this.chestplate = new ItemBuilder(Material.CHAINMAIL_CHESTPLATE).name("§cBrustplatte").enchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 2).setUnbreakable(true).build();
-		this.leggings = new ItemBuilder(Material.LEATHER_LEGGINGS).name("§cHose").enchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 2).setUnbreakable(true).build();
-		this.boots = new ItemBuilder(Material.LEATHER_BOOTS).name("§cSchuhe").enchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 2).setUnbreakable(true).build();
+		this.helmet = new ItemBuilder(Material.LEATHER_HELMET).name("§cHelemt").enchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 2).setUnbreakable(true).build();
+		this.chestplate = new ItemBuilder(Material.CHAINMAIL_CHESTPLATE).name("§cChestplate").enchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 2).setUnbreakable(true).build();
+		this.leggings = new ItemBuilder(Material.LEATHER_LEGGINGS).name("§cLeggings").enchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 2).setUnbreakable(true).build();
+		this.boots = new ItemBuilder(Material.LEATHER_BOOTS).name("§cBoots").enchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 2).setUnbreakable(true).build();
 		
 		this.defaultItems = new ItemStack[36];
 		this.defaultItems[0] = this.sword;
@@ -42,7 +42,7 @@ public class ItemManager {
 		ItemStack black = new ItemBuilder(Material.BLACK_STAINED_GLASS_PANE, 1, 15).name("§e").build();
 		ItemStack yellow = new ItemBuilder(Material.BLACK_STAINED_GLASS_PANE, 1, 4).name("§e").build();
 		
-		this.changeInventory = Bukkit.createInventory(null, 6*9, "§eInventar Sortierung");
+		this.changeInventory = Bukkit.createInventory(null, 6*9, "§eInventar sorting");
 		for(int i = 0; i < this.changeInventory.getSize(); i++) {
 			this.changeInventory.setItem(i, black);
 		}

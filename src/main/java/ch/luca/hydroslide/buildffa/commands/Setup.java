@@ -42,9 +42,9 @@ public class Setup implements CommandExecutor {
 				} catch (IOException e) {
 					e.printStackTrace();
 				}
-				p.sendMessage(buildFFA.getPrefix() + "Der Spawn wurde gesetzt.");
+				p.sendMessage(buildFFA.getPrefix() + "You set the spawn.");
 				return true;
-			} else if(args[0].equalsIgnoreCase("setkampf")) {
+			} else if(args[0].equalsIgnoreCase("setfight")) {
 				File configFile = new File(buildFFA.getDataFolder().getPath(), "config.yml");
 				YamlConfiguration cfg = YamlConfiguration.loadConfiguration(configFile);
 				int y = p.getLocation().getBlockY();
@@ -55,9 +55,9 @@ public class Setup implements CommandExecutor {
 				} catch (IOException e) {
 					e.printStackTrace();
 				}
-				p.sendMessage(buildFFA.getPrefix() + "Die Kampf-Höhe wurde gesetzt.");
+				p.sendMessage(buildFFA.getPrefix() + "You set the fightheight.");
 				return true;
-			} else if(args[0].equalsIgnoreCase("settod")) {
+			} else if(args[0].equalsIgnoreCase("setdeath")) {
 				File configFile = new File(buildFFA.getDataFolder().getPath(), "config.yml");
 				YamlConfiguration cfg = YamlConfiguration.loadConfiguration(configFile);
 				int y = p.getLocation().getBlockY();
@@ -68,13 +68,13 @@ public class Setup implements CommandExecutor {
 				} catch (IOException e) {
 					e.printStackTrace();
 				}
-				p.sendMessage(buildFFA.getPrefix() + "Die Todes-Höhe wurde gesetzt.");
+				p.sendMessage(buildFFA.getPrefix() + "You set the deathheight.");
 				return true;
 			}
 		}
 		p.sendMessage(buildFFA.getPrefixUse() + "setup setspawn");
-		p.sendMessage(buildFFA.getPrefixUse() + "setup setkampf");
-		p.sendMessage(buildFFA.getPrefixUse() + "setup settod");
+		p.sendMessage(buildFFA.getPrefixUse() + "setup setfeight");
+		p.sendMessage(buildFFA.getPrefixUse() + "setup setdeath");
 		return true;
 	}
 }

@@ -25,7 +25,7 @@ public class Stats implements CommandExecutor {
 		}
 		Player p = (Player) sender;
 		if(!BuildFFA.getInstance().getUserManager().getUser(p).checkDelay()) {
-			p.sendMessage(buildFFA.getPrefix() + "§cBitte warte kurz...");
+			p.sendMessage(buildFFA.getPrefix() + "§cPlease wait a moment...");
 			return true;
 		}
 		if(args.length == 1) {

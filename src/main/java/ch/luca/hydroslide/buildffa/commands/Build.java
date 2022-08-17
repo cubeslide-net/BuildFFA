@@ -35,20 +35,20 @@ public class Build implements CommandExecutor {
 			}
 			if(buildFFA.getAllowBuild().contains(p2)) {
 				buildFFA.getAllowBuild().remove(p2);
-				p.sendMessage(buildFFA.getPrefix() + "Der §cBuild-Modus §7von §e" + p2.getName() + " §7wurde §cdeaktiviert§7.");
+				p.sendMessage(buildFFA.getPrefix() + "The §cBuild-Mode §7from §e" + p2.getName() + " §7is §cdeactivated§7.");
 				return true;
 			}
 			buildFFA.getAllowBuild().add(p2);
-			p.sendMessage(buildFFA.getPrefix() + "Der §cBuild-Modus §7von §e" + p2.getName() + " §7wurde §aaktiviert§7.");
+			p.sendMessage(buildFFA.getPrefix() + "The §cBuild-Modus §7from §e" + p2.getName() + " §7is §aactivated§7.");
 			return true;
 		} else {
 			if(buildFFA.getAllowBuild().contains(p)) {
 				buildFFA.getAllowBuild().remove(p);
-				p.sendMessage(buildFFA.getPrefix() + "Dein §cBuild-Modus §7wurde §cdeaktiviert§7.");
+				p.sendMessage(buildFFA.getPrefix() + "Your §cBuild-Mode §7is §cdeactivated§7.");
 				return true;
 			}
 			buildFFA.getAllowBuild().add(p);
-			p.sendMessage(buildFFA.getPrefix() + "Dein §cBuild-Modus §7wurde §aaktiviert§7.");
+			p.sendMessage(buildFFA.getPrefix() + "Your §cBuild-Mode §7is §aactivated§7.");
 			return true;
 		}
 	}
