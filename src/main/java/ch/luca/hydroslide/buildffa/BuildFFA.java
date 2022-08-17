@@ -182,9 +182,7 @@ public class BuildFFA extends JavaPlugin {
                 }
             }
         }, 1L, 1L);
-        for (Player all : Bukkit.getOnlinePlayers()) {
-            userManager.getUser(all).createScoreboard();
-        }
+        //TODO: createScoreboard
         Bukkit.getConsoleSender().sendMessage(this.getPrefix() + "§5BuildFFA §7wurde §aerfolgreich §7gestartet.");
         Bukkit.getConsoleSender().sendMessage(this.getPrefix() + "Datenbanken sowie Configs wurde §aerfolgreich §7geladen.");
         Bukkit.getConsoleSender().sendMessage(this.getPrefix() + "Minecraft-Version: §c1.8");
