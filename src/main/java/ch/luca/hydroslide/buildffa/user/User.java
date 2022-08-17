@@ -71,9 +71,9 @@ public class User {
 		});
 	}
 	public void death(boolean fall) {
-		this.player.setHealth(20.0D);
 		if(fall) {
 			this.player.teleport(BuildFFA.getInstance().getSpawnLocation());
+			this.player.setHealth(20.0D);
 			this.deaths++;
 			this.player.playSound(this.player.getLocation(), Sound.ENTITY_ENDERMAN_DEATH, 1F, 1F);
 			//TODO: update deaths line
@@ -94,10 +94,9 @@ public class User {
 			return;
 		}
 		Bukkit.getScheduler().runTaskLater(BuildFFA.getInstance(), () -> {
-			this.player.teleport(BuildFFA.getInstance().getSpawnLocation());
 			this.deaths++;
 			this.player.playSound(this.player.getLocation(), Sound.ENTITY_ENDERMAN_DEATH, 1F, 1F);
-
+			this.player.spigot().respawn();
 			//TODO: update deaths line
 			if(this.damage != null) {
 				Player d = this.damage;

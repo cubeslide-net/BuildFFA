@@ -47,7 +47,6 @@ public class Stats implements CommandExecutor {
 						e.printStackTrace();
 					}
 					p.sendMessage(buildFFA.getPlayerNeverOnline());
-					return;
 				});
 				return true;
 			}

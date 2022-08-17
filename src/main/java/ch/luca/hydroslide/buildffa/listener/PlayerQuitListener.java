@@ -13,6 +13,9 @@ public class PlayerQuitListener implements Listener {
 	public void onQuit(PlayerQuitEvent e) {
 		Player p = e.getPlayer();
 		e.setQuitMessage(null);
+
+		BuildFFA.getInstance().getBoards().remove(p.getUniqueId());
+
 		for(Team t : BuildFFA.getInstance().getScoreboard().getTeams()) {
 			if(t.hasEntry(p.getName())) {
 				t.removeEntry(p.getName());
